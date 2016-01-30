@@ -147,6 +147,9 @@ int have_libjack(void);
 #define jack_ringbuffer_read                WJACK_ringbuffer_read
 #define jack_ringbuffer_write               WJACK_ringbuffer_write
 #define jack_ringbuffer_mlock               WJACK_ringbuffer_mlock
+#define jack_ringbuffer_get_read_vector     WJACK_ringbuffer_get_read_vector
+#define jack_ringbuffer_get_write_vector    WJACK_ringbuffer_get_write_vector
+#define jack_ringbuffer_peek                WJACK_ringbuffer_peek
 
 /* <jack/thread.h> */
 #define jack_client_real_time_priority      WJACK_client_real_time_priority
@@ -194,9 +197,6 @@ int have_libjack(void);
 #ifndef NO_JACK_METADATA
 #include <jack/metadata.h>
 #endif
-
-// prototype for function currently only available in jack1 headers
-int jack_port_rename (jack_client_t* client, jack_port_t *port, const char *port_name);
 
 #ifdef USE_WEAK_JACK
 
